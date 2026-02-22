@@ -19,12 +19,14 @@ layout: compress
   {% include head.html %}
 
   <body data-spy="scroll" data-target="#toc" data-topbar-visible="true">
+      <canvas id="particles"></canvas>
 
     {% include sidebar.html %}
 
     {% include topbar.html %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
+      <canvas id="particles"></canvas>
       <div id="main" class="container pl-xl-4 pr-xl-4">
         {{ content }}
       </div>
@@ -66,6 +68,7 @@ layout: compress
 
     {% include js-selector.html %}
 
+    <script src="{{ '/assets/js/aero.js' | relative_url }}"></script>
   </body>
 
 </html>

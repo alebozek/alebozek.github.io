@@ -1,170 +1,232 @@
 /*
- * The main dark mode styles
+ * Frutiger Aero Cybersecurity Dark Mode
+ * Full Glass + Glow + Web 2.0 Edition
  */
 
 @mixin dark-scheme {
-  /* Framework color */
-  --body-bg: var(--main-bg);
-  --mask-bg: rgb(68, 69, 70);
-  --main-bg: rgb(27, 27, 30);
-  --main-border-color: rgb(44, 45, 45);
 
-  /* Common color */
-  --text-color: rgb(175, 176, 177);
-  --text-muted-color: rgb(107, 116, 124);
-  --heading-color: #cccccc;
-  --blockquote-border-color: rgb(66, 66, 66);
-  --blockquote-text-color: rgb(117, 117, 117);
-  --link-color: rgb(138, 180, 248);
-  --link-underline-color: rgb(82, 108, 150);
-  --button-bg: rgb(39, 40, 43);
-  --btn-border-color: rgb(63, 65, 68);
-  --btn-backtotop-color: var(--text-color);
-  --btn-backtotop-border-color: var(--btn-border-color);
-  --btn-box-shadow: var(--main-bg);
-  --card-header-bg: rgb(51, 50, 50);
-  --label-color: rgb(108, 117, 125);
-  --checkbox-color: rgb(118, 120, 121);
-  --checkbox-checked-color: var(--link-color);
-  --img-bg: radial-gradient(circle, rgb(22, 22, 24) 0%, rgb(32, 32, 32) 100%);
-  --shimmer-bg:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(58, 55, 55, 0.4) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
+  /* ===============================
+   * Core Background
+   * =============================== */
+  --main-bg: #0e1624;
+  --body-bg: radial-gradient(circle at top, #1a2a44 0%, #0e1624 60%);
+  --mask-bg: rgba(20, 35, 60, 0.85);
+  --main-border-color: rgba(120, 180, 255, 0.15);
 
-  /* Sidebar */
-  --sidebar-bg: radial-gradient(circle, #242424 0%, #1d1f27 100%);
-  --sidebar-muted-color: #6d6c6b;
-  --sidebar-active-color: rgb(255, 255, 255, 0.8);
-  --nav-cursor-color: rgb(183, 182, 182);
-  --sidebar-btn-bg: rgb(117, 116, 116, 0.2);
+  --text-color: #e6f2ff;
+  --text-muted-color: #9ec3ff;
+  --heading-color: #ffffff;
 
-  /* Topbar */
-  --topbar-text-color: var(--text-color);
-  --topbar-wrapper-bg: rgb(39, 40, 43);
-  --search-wrapper-bg: rgb(34, 34, 39);
-  --search-wrapper-border-color: rgb(34, 34, 39);
-  --search-icon-color: rgb(100, 102, 105);
-  --input-focus-border-color: rgb(112, 114, 115);
-
-  /* Home page */
-  --post-list-text-color: rgb(175, 176, 177);
-  --btn-patinator-text-color: var(--text-color);
-  --btn-paginator-hover-color: rgb(64, 65, 66);
-  --btn-paginator-border-color: var(--btn-border-color);
-  --btn-text-color: var(--text-color);
-  --pin-bg: rgb(34, 35, 37);
-  --pin-color: inherit;
-
-  /* Posts */
-  --toc-highlight: rgb(116, 178, 243);
-  --tag-bg: rgb(41, 40, 40);
-  --tag-hover: rgb(43, 56, 62);
-  --tb-odd-bg: rgba(42, 47, 53, 0.52); /* odd rows of the posts' table */
-  --tb-even-bg: rgb(31, 31, 34); /* even rows of the posts' table */
-  --tb-border-color: var(--tb-odd-bg);
-  --footnote-target-bg: rgb(63, 81, 181);
-  --btn-share-color: #6c757d;
-  --btn-share-hover-color: #bfc1ca;
-  --relate-post-date: var(--text-muted-color);
-  --card-bg: rgb(39, 40, 43);
-  --card-border-color: rgb(53, 53, 60);
-  --card-box-shadow: var(--main-bg);
-  --kbd-wrap-color: #6a6a6a;
-  --kbd-text-color: #d3d3d3;
-  --kbd-bg-color: #242424;
-  --prompt-text-color: rgb(216, 212, 212, 0.75);
-  --prompt-tip-bg: rgba(77, 187, 95, 0.2);
-  --prompt-tip-icon-color: rgb(5, 223, 5, 0.68);
-  --prompt-info-bg: rgb(7, 59, 104, 0.8);
-  --prompt-info-icon-color: #0075d1;
-  --prompt-warning-bg: rgb(90, 69, 3, 0.95);
-  --prompt-warning-icon-color: rgb(255, 165, 0, 0.8);
-  --prompt-danger-bg: rgb(86, 28, 8, 0.8);
-  --prompt-danger-icon-color: #cd0202;
-
-  /* tags */
-  --tag-border: rgb(59, 79, 88);
-  --tag-shadow: rgb(32, 33, 33);
-  --search-tag-bg: var(--tag-bg);
-  --dash-color: rgb(63, 65, 68);
-
-  /* categories */
-  --categories-border: rgb(64, 66, 69);
-  --categories-hover-bg: rgb(73, 75, 76);
-  --categories-icon-hover-color: white;
-
-  /* archives */
-  --timeline-node-bg: rgb(150, 152, 156);
-  --timeline-color: rgb(63, 65, 68);
-  --timeline-year-dot-color: var(--timeline-color);
-
-  .post img[data-src] {
-    &.lazyloaded {
-      -webkit-filter: brightness(95%);
-      filter: brightness(95%);
-    }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: 0.2px;
+    background: var(--body-bg);
   }
 
-  .light {
-    display: none;
+  /* ===============================
+   * Animated Gradient Logo
+   * =============================== */
+  .site-title {
+    background: linear-gradient(90deg, #5cc8ff, #00ffaa, #5cc8ff);
+    background-size: 200% auto;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: gradientFlow 6s linear infinite;
+  }
+
+  @keyframes gradientFlow {
+    to { background-position: 200% center; }
+  }
+
+  /* ===============================
+   * Links
+   * =============================== */
+  --link-color: #5cc8ff;
+
+  a {
+    transition: all 0.25s ease;
+  }
+
+  a:hover {
+    text-shadow: 0 0 10px rgba(92, 200, 255, 0.8);
+  }
+
+  /* ===============================
+   * Glass Cards
+   * =============================== */
+  .card {
+    backdrop-filter: blur(16px) saturate(130%);
+    border-radius: 16px;
+    border: 1px solid rgba(120, 180, 255, 0.25);
+    background: rgba(30, 60, 110, 0.45);
+    box-shadow:
+      0 10px 40px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  }
+
+/* ===============================
+ * Remove Code Header Completely
+ * =============================== */
+
+.code-header {
+  display: none !important;
+}
+/* ===============================
+ * Responsive Frutiger Aero Code
+ * =============================== */
+
+/* Outer container */
+.highlight {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.02)
+    ),
+    rgba(15, 30, 60, 0.65);
+
+  backdrop-filter: blur(18px) saturate(160%);
+  border: 1px solid rgba(120, 180, 255, 0.35);
+
+  box-shadow:
+    0 0 40px rgba(92, 200, 255, 0.25),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+
+  margin: 1.5rem 0;
+}
+
+/* Inner pre reset */
+.highlight pre {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0;
+  padding: 1.2rem 1.4rem;
+
+  font-size: clamp(0.8rem, 1vw, 0.95rem);
+  line-height: 1.6;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* Prevent weird wrapping in small containers */
+.highlight code {
+  white-space: pre;
+}
+
+/* Inline code */
+code {
+  background: rgba(92,200,255,0.15);
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+/* Improve scrolling on mobile */
+.highlight::-webkit-scrollbar {
+  height: 8px;
+}
+
+.highlight::-webkit-scrollbar-thumb {
+  background: rgba(92,200,255,0.5);
+  border-radius: 4px;
+}
+
+  /* ===============================
+   * Glossy Buttons
+   * =============================== */
+  .btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    background: linear-gradient(to bottom, #3f7fd9, #1e4f9e);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    box-shadow:
+      inset 0 2px 4px rgba(255, 255, 255, 0.4),
+      0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .btn::after {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      120deg,
+      rgba(255,255,255,0.0) 30%,
+      rgba(255,255,255,0.4) 50%,
+      rgba(255,255,255,0.0) 70%
+    );
+    transform: rotate(25deg);
+    animation: sheen 4s infinite;
+  }
+
+  @keyframes sheen {
+    0% { transform: translateX(-100%) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+  }
+
+  /* ===============================
+   * Navbar Glass Effect
+   * =============================== */
+  .topbar {
+    backdrop-filter: blur(20px) saturate(150%);
+    background: rgba(20, 35, 60, 0.55) !important;
+    border-bottom: 1px solid rgba(120,180,255,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .topbar.scrolled {
+    background: rgba(15, 30, 60, 0.85) !important;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.6);
+  }
+
+  /* ===============================
+   * Floating Background Canvas
+   * =============================== */
+  #particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  /* ===============================
+   * Aero Loader
+   * =============================== */
+  .loader {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(92,200,255,0.2);
+    border-top: 4px solid #5cc8ff;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
   }
 
   hr {
-    border-color: var(--main-border-color);
-  }
-
-  /* posts' toc, override BS */
-  nav[data-toggle="toc"] .nav-link.active,
-  nav[data-toggle="toc"] .nav-link.active:focus,
-  nav[data-toggle="toc"] .nav-link.active:hover,
-  nav[data-toggle="toc"] .nav > li > a:focus,
-  nav[data-toggle="toc"] .nav > li > a:hover {
-    color: var(--toc-highlight) !important;
-    border-left-color: var(--toc-highlight) !important;
-  }
-
-  /* categories */
-  .categories.card,
-  .list-group-item {
-    background-color: var(--card-bg);
-  }
-
-  .categories {
-    .card-header {
-      background-color: var(--card-header-bg);
-    }
-
-    .list-group-item {
-      border-left: none;
-      border-right: none;
-      padding-left: 2rem;
-      border-color: var(--categories-border);
-
-      &:last-child {
-        border-bottom-color: var(--card-bg);
-      }
-    }
-  }
-
-  #archives li:nth-child(odd) {
-    background-image:
-      linear-gradient(
-        to left,
-        rgb(26, 26, 30),
-        rgb(39, 39, 45),
-        rgb(39, 39, 45),
-        rgb(39, 39, 45),
-        rgb(26, 26, 30)
-      );
+    border-color: rgba(120, 180, 255, 0.2);
   }
 
   color-scheme: dark;
-
-  #disqus_thread { /* stylelint-disable-line selector-id-pattern */
-    color-scheme: none;
-  }
-} /* dark-scheme */
+}
